@@ -111,7 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dacb94733d4c7110aa3c62a50381ea00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: a4b04a115898ca1e6b6d6f97e14201b7, type: 2}
+  player_id: 0
   velocity: 5
+  keyboard: []
 --- !u!54 &-643115552431214335
 Rigidbody:
   m_ObjectHideFlags: 0
