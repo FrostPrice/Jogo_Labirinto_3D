@@ -497,7 +497,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346107136}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1026,17 +1026,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721976655}
   m_CullTransparentMesh: 1
---- !u!114 &723796459 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 641440536761027353, guid: 012f7cd9cdee4b52daec159b748dcb6a, type: 3}
-  m_PrefabInstance: {fileID: 641440537210012358}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114e2e4ad98d1787fbfd50fd5466c1a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &752301180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1140,6 +1129,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3526471796347751040, guid: 9e68737d569721e84aa839fd050a5fe6, type: 3}
   m_PrefabInstance: {fileID: 752301180}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &765132903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 641440536761027353, guid: 012f7cd9cdee4b52daec159b748dcb6a, type: 3}
+  m_PrefabInstance: {fileID: 641440537210012358}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114e2e4ad98d1787fbfd50fd5466c1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &860594323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,9 +1224,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 723796459}
+      - m_Target: {fileID: 765132903}
         m_TargetAssemblyTypeName: Mapa, Assembly-CSharp
-        m_MethodName: save_map
+        m_MethodName: save_game
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1532,6 +1532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc7de909ab56e9f9ab3c469bfecd914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 0}
 --- !u!4 &952315798
 Transform:
   m_ObjectHideFlags: 0
@@ -2639,6 +2640,10 @@ PrefabInstance:
     - target: {fileID: 1690348430163518809, guid: 9e68737d569721e84aa839fd050a5fe6, type: 3}
       propertyPath: m_Name
       value: Player_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690348430163518809, guid: 9e68737d569721e84aa839fd050a5fe6, type: 3}
+      propertyPath: m_TagString
+      value: Seeker
       objectReference: {fileID: 0}
     - target: {fileID: 3526471796347751040, guid: 9e68737d569721e84aa839fd050a5fe6, type: 3}
       propertyPath: m_RootOrder

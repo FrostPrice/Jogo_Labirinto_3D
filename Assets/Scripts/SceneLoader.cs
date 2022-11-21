@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public Config config;
+
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
@@ -14,6 +16,11 @@ public class SceneLoader : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public void LoadGame(string map_file_name) {
+        config.map_file_name = map_file_name;
+        SceneManager.LoadScene(1);
     }
 
     public void ResumeScene() {

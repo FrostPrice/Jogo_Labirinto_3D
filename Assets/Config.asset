@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   col: 25
   lin: 20
+  timer: 0.02
+  map_file_name: maze

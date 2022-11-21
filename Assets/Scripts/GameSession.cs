@@ -9,6 +9,7 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        config.timer = 0.000000f;
         GameObject pause_menu_canvas = GameObject.Find("Pause Menu");
         pause_menu_canvas.GetComponent<CanvasGroup>().alpha = 0;
         Time.timeScale = 1; 

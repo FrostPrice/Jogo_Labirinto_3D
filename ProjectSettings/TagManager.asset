@@ -7,6 +7,8 @@ TagManager:
   - Unbreakable
   - Hider
   - Pause_Menu
+  - Wall
+  - Seeker
   layers:
   - Default
   - TransparentFX
