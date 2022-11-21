@@ -8,4 +8,5 @@ public class Config : ScriptableObject
     public int col;
     public int lin;
     public int[,] mapa;
+    public float timer = 0.0f;
 }

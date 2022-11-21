@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DetectCollision : MonoBehaviour
 {
+    public GameSession game_session;
+    public SceneLoader scene_loader;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class DetectCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Hider")) {
-            SceneManager.LoadScene(0);
+            scene_loader.LoadNextScene();
         }
     }
 }

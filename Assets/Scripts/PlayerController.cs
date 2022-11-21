@@ -44,7 +44,9 @@ public class PlayerController : MonoBehaviour
         } else if (Input.GetKey(keyboard[3])) {
             transform.Translate(Vector3.right * velocity * Time.deltaTime);
         } else if (Input.GetKey(KeyCode.P)) {
-            
+            Time.timeScale = 0;
+            GameObject pause_menu_canvas = GameObject.Find("Pause Menu");
+            pause_menu_canvas.GetComponent<CanvasGroup>().alpha = 1;
         }
     }
 }
