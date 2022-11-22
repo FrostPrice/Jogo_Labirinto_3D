@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
-    public GameSession game_session;
     public SceneLoader scene_loader;
 
     // Start is called before the first frame update
@@ -20,8 +19,14 @@ public class DetectCollision : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.CompareTag("Hider")) {
+        if(gameObject.CompareTag("Seeker Collision") && other.gameObject.CompareTag("Hider")) {
             scene_loader.LoadNextScene();
+        }
+
+        if(gameObject.CompareTag("Item") && other.gameObject.CompareTag("Hider")) {
+            Destroy(gameObject);
+            GameObject game_session = GameObject.Find("Game Session");
+            game_session.GetComponent<ItemController>().execute_random_power();
         }
     }
 }

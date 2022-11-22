@@ -111,6 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114e2e4ad98d1787fbfd50fd5466c1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: 25
-  lin: 20
+  config: {fileID: 11400000, guid: a4b04a115898ca1e6b6d6f97e14201b7, type: 2}
   parede: {fileID: 3586183506209284671, guid: 2e3c28d371d4203efb40f0ebb9f14322, type: 3}

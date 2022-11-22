@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   col: 25
   lin: 20
-  timer: 0.02
+  timer: 8.758112
   map_file_name: maze
+  player_1: {fileID: 6896869312106511732, guid: 29d7b2a802cce9edeb267014c47aec8e, type: 3}
+  player_2: {fileID: 7036423803959387466, guid: 356cdeb20aefb5f5a9fdeeba485e7be0, type: 3}

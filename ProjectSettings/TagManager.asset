@@ -9,6 +9,8 @@ TagManager:
   - Pause_Menu
   - Wall
   - Seeker
+  - Seeker Collision
+  - Item
   layers:
   - Default
   - TransparentFX
