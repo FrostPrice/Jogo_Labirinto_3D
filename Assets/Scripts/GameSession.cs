@@ -12,6 +12,7 @@ public class GameSession : MonoBehaviour
         config.timer = 0.000000f;
         GameObject pause_menu_canvas = GameObject.Find("Pause Menu");
         pause_menu_canvas.GetComponent<CanvasGroup>().alpha = 0;
+        pause_menu_canvas.GetComponent<CanvasGroup>().interactable = false;
         Time.timeScale = 1; 
     }
 

@@ -20,7 +20,7 @@ public class Mapa : MonoBehaviour
     void CriaMapa () {
         // -- Comando para ler do arquivo e salvar na matriz de inteiros --
         //meu arquivo � um csv, mas funciona com qualquer extens�o de arquivo
-        string arquivo = File.ReadAllText("./Assets/Mazes/" + config.map_file_name + ".csv");
+        string arquivo = File.ReadAllText("./Assets/Files/" + config.map_file_name + ".csv");
 
         config.mapa = new int[config.lin, config.col];
         int i=0, j=0;
@@ -98,7 +98,7 @@ public class Mapa : MonoBehaviour
             }    
         }
 
-        StreamWriter file = new StreamWriter("./Assets/Mazes/saved_maze.csv");
+        StreamWriter file = new StreamWriter("./Assets/Files/saved_maze.csv");
 
         for (int i = 0; i < config.lin; i++) {
             for (int j = 0; j < config.col - 1; j++) {

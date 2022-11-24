@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
             GameObject pause_menu_canvas = GameObject.Find("Pause Menu");
             pause_menu_canvas.GetComponent<CanvasGroup>().alpha = 1;
+            pause_menu_canvas.GetComponent<CanvasGroup>().interactable = true;
         }
     }
 }
