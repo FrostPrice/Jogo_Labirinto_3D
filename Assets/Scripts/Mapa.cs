@@ -66,6 +66,7 @@ public class Mapa : MonoBehaviour
     
     public void save_game() {
         GameObject[] walls = GameObject.FindGameObjectsWithTag("Wall");
+        GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
         GameObject player_1 = GameObject.FindGameObjectWithTag("Seeker");
         GameObject player_2 = GameObject.FindGameObjectWithTag("Hider");
 
@@ -84,15 +85,20 @@ public class Mapa : MonoBehaviour
             int j = (int)wall.transform.position.z + 20;
             saved_map[i, j] = 1;
         }
+        foreach (GameObject item in items)
+        {
+            int i = (int)item.transform.position.x + 20;
+            int j = (int)item.transform.position.z + 20;
+            saved_map[i, j] = 4;
+        }
 
-        for (int i=0; i<config.lin ; i++) {
+        for (int i=0; i<config.lin; i++) {
             for (int j=0; j<config.col - 1; j++) {
                 if (i == player_1_lin && j == player_1_col) {
                     saved_map[i, j] = 2;
                 } else if (i == player_2_lin && j == player_2_col) {
                     saved_map[i, j] = 3;
-                }
-                else if (saved_map[i, j] != 1) {
+                } else if (saved_map[i, j] != 1 && saved_map[i, j] != 4) {
                     saved_map[i, j] = 0;
                 }
             }    

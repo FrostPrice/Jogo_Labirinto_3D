@@ -31,7 +31,8 @@ public class ItemController : MonoBehaviour
     }
 
     public void execute_random_power() {
-        int random_number = Random.Range(0, 8);
+        // int random_number = Random.Range(0, 8);
+        int random_number = Random.Range(7, 8);
 
         switch(random_number) {
             case 0:
@@ -82,8 +83,8 @@ public class ItemController : MonoBehaviour
         int[,] map = config.mapa;
 
         do {
-            random_x = Random.Range(0, config.col);
-            random_y = Random.Range(0, config.lin);
+            random_x = Random.Range(0, config.col - 1);
+            random_y = Random.Range(0, config.lin - 1);
         } while(map[random_y, random_x] != 0);
 
         player_2.transform.position = new Vector3((float)random_y - 20.0f, 2.0f, (float)random_x - 20.0f);
