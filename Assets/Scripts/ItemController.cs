@@ -31,8 +31,7 @@ public class ItemController : MonoBehaviour
     }
 
     public void execute_random_power() {
-        // int random_number = Random.Range(0, 8);
-        int random_number = Random.Range(7, 8);
+        int random_number = Random.Range(0, 8);
 
         switch(random_number) {
             case 0:

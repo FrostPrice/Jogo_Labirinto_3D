@@ -18,9 +18,9 @@ public class ScoreController : MonoBehaviour
     {   
         IEnumerable<Score> ordered_list = scores_data.scores.OrderBy(x => x.score);
 
-        if(ordered_list.Count() > 10) {
+        if(ordered_list.Count() > 6) {
             scores_data.scores = ordered_list.ToList();
-            return ordered_list.SkipLast(ordered_list.Count() - 10); // Limita para a lista ter apenas 10 elementos
+            return ordered_list.SkipLast(ordered_list.Count() - 6); // Limita para a lista ter apenas 10 elementos
         }
 
         scores_data.scores = ordered_list.ToList();
