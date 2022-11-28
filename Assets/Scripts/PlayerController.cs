@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public int player_id;
     [SerializeField] public float velocity = 10.0f;
     [SerializeField] public string[] keyboard;
-
+    [SerializeField] public GameObject player_model;
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +37,16 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(keyboard[0])) {
             transform.Translate(Vector3.forward * velocity * Time.deltaTime);
+            player_model.transform.rotation = transform.rotation * Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f));
         } else if (Input.GetKey(keyboard[1])) {
-            transform.Translate(Vector3.left * velocity * Time.deltaTime);
+            transform.Translate(Vector3.left * velocity * Time.deltaTime); 
+            player_model.transform.rotation = transform.rotation * Quaternion.Euler(new Vector3(0.0f, -90, 0.0f));
         } else if (Input.GetKey(keyboard[2])) {
             transform.Translate(Vector3.back * velocity * Time.deltaTime);
+            player_model.transform.rotation = transform.rotation * Quaternion.Euler(new Vector3(0.0f, -180, 0.0f));
         } else if (Input.GetKey(keyboard[3])) {
             transform.Translate(Vector3.right * velocity * Time.deltaTime);
+            player_model.transform.rotation = transform.rotation * Quaternion.Euler(new Vector3(0.0f, 90, 0.0f));
         } else if (Input.GetKey(KeyCode.P)) {
             Time.timeScale = 0;
             GameObject pause_menu_canvas = GameObject.Find("Pause Menu");
